@@ -1,0 +1,2 @@
+class Tippee < ApplicationRecord
+end
