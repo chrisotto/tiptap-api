@@ -16,6 +16,7 @@ class TippeesController < ApplicationController
   # POST /tippees
   def create
     @tippee = Tippee.new(tippee_params)
+    @tippee.beacons.new
 
     if @tippee.save
       render json: @tippee, status: :created, location: @tippee
