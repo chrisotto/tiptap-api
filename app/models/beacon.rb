@@ -1,5 +1,5 @@
 class Beacon < ApplicationRecord
-  belongs_to: :tippee
+  belongs_to :tippee
   validates :tippee, presence: true
 
   def uuid
