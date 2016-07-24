@@ -7,10 +7,10 @@ class Beacon < ApplicationRecord
   end
 
   def major
-    @major ||= @id.to_s(2).slice(0,16).to_i(2)
+    @major ||= id.to_s(2).rjust(32, '0').slice(0,16).to_i(2)
   end
 
   def minor
-    @minor ||= @id.to_s(2).slice(16,16).to_i(2)
+    @minor ||= id.to_s(2).rjust(32, '0').slice(16,16).to_i(2)
   end
 end
